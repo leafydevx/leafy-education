@@ -1,41 +1,88 @@
+/* Background with soft leaf pattern */
 body {
-  font-family: sans-serif;
-  margin: 0;
-  background-color: #f0fff0;
-  color: #2e4d2c;
-}
-
-header {
-  background-color: #cdeac0;
-  padding: 1em;
+  background: linear-gradient(135deg, #f0fdf4, #e6f7ec);
+  font-family: 'Segoe UI', sans-serif;
+  color: #2f4f4f;
   text-align: center;
+  padding: 50px;
+  line-height: 1.6;
+  background-image: url('https://www.transparenttextures.com/patterns/leaf.png');
+  background-repeat: repeat;
+  background-size: 200px;
 }
 
-nav a {
-  margin: 0 1em;
+/* Container with plant-like border */
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border: 4px solid #a3d9a5;
+  position: relative;
+}
+
+/* Decorative vines on container corners */
+.container::before,
+.container::after {
+  content: "🌿";
+  position: absolute;
+  font-size: 2em;
+  color: #4caf50;
+}
+.container::before {
+  top: -20px;
+  left: -20px;
+}
+.container::after {
+  bottom: -20px;
+  right: -20px;
+}
+
+/* Headings with leafy accent */
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.3em;
+  color: #1f3d1f;
+  position: relative;
+}
+h1::after {
+  content: "🍃";
+  margin-left: 10px;
+  color: #4caf50;
+}
+
+/* Buttons with plant theme */
+.btn {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
   text-decoration: none;
-  color: #2e4d2c;
-  font-weight: bold;
+  display: inline-block;
+  margin: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px) scale(1.05);
 }
 
-.hero {
-  text-align: center;
-  padding: 2em;
-}
-
-button {
-  margin: 1em;
-  padding: 0.5em 1.5em;
-  background-color: #88c999;
-  border: none;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  padding: 1em;
-  background-color: #cdeac0;
-  margin-top: 2em;
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+  p {
+    font-size: 1em;
+  }
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.9em;
+  }
 }
